@@ -6,7 +6,7 @@
 library(readr)
 library(tidyverse)
 library(lubridate)
-
+library(dplyr)
 
 visit_raw <- read_csv("GRSM_MICR_475/Data/Visit_by_month.csv")
 View(visit_raw)
@@ -36,7 +36,8 @@ visit_date_clean <- visit_order |>
   )
 View(visit_date_clean)
   
-  
+#creating csv to add to project files
+write.csv(visit_date_clean,"visitation.csv")
   
 
 
