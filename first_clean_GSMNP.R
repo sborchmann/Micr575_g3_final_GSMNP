@@ -8,6 +8,16 @@ library(tidyverse)
 library(lubridate)
 library(dplyr)
 
+#what happens if we use the raw original csv file
+visit_og <- read_csv("GRSM_MICR_475/Data/Visitation by Month.csv")
+View(visit_og)
+
+#the csv file from GSMNP opens properly in excel. however, the visit values are stores as numbers BUT include commas, likely for human readability.
+#easy fix: open excel, select numerical values and reselect number as the data type/format. 
+  #then: redownload the csv file in the correct format to be opened by r studio
+  #then: read_csv code should work now. Data cleaning can begin
+
+
 visit_raw <- read_csv("GRSM_MICR_475/Data/Visit_by_month.csv")
 View(visit_raw)
 
